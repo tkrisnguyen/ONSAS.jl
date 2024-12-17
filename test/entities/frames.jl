@@ -12,8 +12,10 @@ using ONSAS.Frames
     n1 = Node(0.0, L1, L1)
     n2 = Node(0.0, 0.0, L2)
     n3 = Node(0.0, 0.0, 0.0)
+    n4 = Node(0, 0, 0)
     R = Rectangle(ty, tz)
     f1 = Frame(n1, n2, R)
+    f3 = Frame(n1, n4, R)
 
     @test nodes(f1) == [n1, n2]
     @test cross_section(f1) == R
